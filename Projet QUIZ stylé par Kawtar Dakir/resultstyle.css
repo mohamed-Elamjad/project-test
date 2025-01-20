@@ -1,0 +1,100 @@
+/* result */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #1a1a1a; /* Fond sombre pour l'effet rétro */
+    color: #ffffff; /* Texte en blanc pour un contraste fort */
+    line-height: 1.6;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff; /* Vert lumineux comme dans les écrans rétro */
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-out; /* Animation du titre */
+}
+
+#result-score {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #09326c; /* Fond légèrement transparent vert */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-out; /* Animation d'apparition du score */
+}
+
+#result-score span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: #f7eb0a;
+    color: #1a1a1a;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: fadeInButton 1s ease-in-out; /* Animation du bouton */
+}
+
+button:hover {
+    background-color: #09326c;
+    transition: background-color 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* Animation pour le fadeIn du titre */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour faire glisser le score depuis la droite */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation du bouton (fadeIn et légère translation) */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

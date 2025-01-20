@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Page</title>
+    <link rel="stylesheet" href="specialstyle.css">
+  </head>
+
+  <body>
+    <h1>IDENTIFIER lES QUESTIONS SANS REPONSES CORRECTES</h1>
+    <p>Vous n'avez répondu à aucune question, mais deux questions ont été conçues sans options correctes. Veuillez indiquer lesquelles :</p>
+
+    <div class="qa-body-special">
+      <!-- Question 1 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q1" value="1">
+            <span> Question 1: Qu'est-ce qu'une adresse IP de classe A ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q2" value="1">
+            <span> Question 2: Quel est le rôle d un VLAN dans un réseau ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q3" value="1">
+            <span> Question 3: Qu'est-ce que le NAT (Network Address Translation) permet de faire ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q4" value="1">
+            <span> Question 4: Quelle est la différence principale entre le routage statique et le routage dynamique ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q5" value="1">
+            <span> Question 5: WQuelle est la principale différence entre un switch de niveau 2 (L2) et un switch de niveau 3 (L3) ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q6" value="1">
+            <span> Question 6: Quel est le rôle du protocole DHCP dans un réseau ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q7" value="1">
+            <span> Question 7: Qu'est-ce qu'un réseau de type "classé" (subnetting) permet de faire ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q8" value="1">
+            <span> Question 8: Quelle est la fonction principale du protocole RIP ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q9" value="1">
+            <span> Question 9: Qu'est-ce que le BGP (Border Gateway Protocol) ? </span>
+          </div><br>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="">
+          <div class="answers-row">
+            <input type="checkbox" name="q10" value="1">
+            <span> Question 10: Dans un réseau, quel est l objectif de la fonction de « port forwarding » sur un routeur ? </span>
+          </div><br>
+      </div>
+    </div>
+
+    <div class="navigation-buttons">
+        <button type="button" id="submitButton"  onclick="submitQuiz()">CONFIRMER</button>
+    </div>
+  
+    <script>
+      /*
+      Define special answers for each question
+      */
+      const specialAnswers = {
+          q1: ["1"], // Special answers for question 1
+          q2: ["1"],      // Special answer for question 2
+          q3: [], // Correct answers for question 3
+          q4: [], // Correct answers for question 4
+          q5: [], // Correct answers for question 5
+          q6: [], // Correct answers for question 6
+          q7: [], // Correct answers for question 7
+          q8: [], // Correct answers for question 8
+          q9: [], // Correct answers for question 9
+          q10: [], // Correct answers for question 10
+      };
+
+      /*
+      The total of questions
+      */
+      const totalQuestions = 2; //Ten questions
+      let score = 0;
+
+      function submitQuiz() {
+          for (let i = 1; i <= totalQuestions; i++) {
+              const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+              const selectedValues = Array.from(selected).map(q => q.value);
+
+              const correct = specialAnswers[`q${i}`];
+              const correctSelected = selectedValues.filter(value => correct.includes(value)).length;
+              const incorrectSelected = selectedValues.filter(value => !correct.includes(value)).length;
+
+              if (correctSelected === correct.length && incorrectSelected === 0) {
+                  score += 2; // Full correct: +2
+              } else if (correctSelected > 0 || incorrectSelected > 0) {
+                  score -= 1; // Partial or incorrect: -1
+              }
+          }
+          localStorage.removeItem("quizScore")
+          
+          let qs = Number(localStorage.getItem("quizScore")) || 0;
+
+          //localStorage.removeItem("quizScore")
+
+          const finalSpecialResult = qs + Number(score);
+
+          localStorage.setItem("fsr", finalSpecialResult)
+
+          // Redirect to the result page
+          window.location.href = "result.html";
+      }
+
+    </script>
+  </body>
+</html>

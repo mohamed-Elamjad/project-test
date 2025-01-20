@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* General Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(175,175,198,1) 0%, rgba(244,244,249,1) 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-image: url('IMG/index.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  h1 {
+    color: #ffffff;
+  }
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f7eb0a; /* Texte blanc */
+    animation: fadeIn 1.5s ease-in-out; /* Animation */
+}
+
+#question-selection {
+    width: 100%;
+    max-width: 800px; /* Largeur max de la boîte de questions */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Permet le défilement si le contenu dépasse */
+    max-height: 80vh; /* Limite la hauteur de la boîte pour laisser de l'espace */
+    margin-bottom: 30px; /* Ajoute un espace entre le contenu et le bouton */
+}
+
+.answers-row {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.answers-row input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.answers-row input:checked + span {
+    background-color: #f7eb0a; /* Couleur pour les bonnes réponses */
+}
+
+.answers-row span {
+    display: block;
+    padding: 8px 15px;
+    background-color: #bad0c9;
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+}
+
+.answers-row:hover span {
+    background-color: #9ab5ac; /* Changer la couleur au survol */
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #f7eb0a;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: fadeInButton 1s ease-in-out; /* Animation */
+}
+
+button:hover {
+    background-color: #09326c;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButton {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+  
+  

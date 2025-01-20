@@ -1,0 +1,123 @@
+/* Answers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace; /* Police rétro pour l'effet terminal */
+    background: url('IMG/index.png') no-repeat center center fixed; /* Image en arrière-plan */
+    background-size: cover; /* L'image couvre toute la page */
+    color: #ffe600; /* Texte jaune pour contraster avec le bleu */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    overflow: hidden; /* Cache tout débordement */
+    padding: 20px; /* Ajoute un peu de marge autour de la page */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffe600; /* Jaune vif pour le titre */
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-out; /* Animation du titre */
+}
+
+#answers-list {
+    width: 100%;
+    max-width: 800px; /* Limite la largeur du contenu */
+    background-color: #7b88a9; /* Fond bleu foncé translucide */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    animation: slideIn 1.5s ease-out; /* Animation pour faire glisser la liste des réponses */
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+    max-height: 60vh; /* Limite la hauteur de la liste des réponses */
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #190a5dce; /* Jaune légèrement adouci pour les sous-titres */
+    margin: 10px 0;
+}
+
+li {
+    font-size: 1rem;
+    color: #ffffff; /* Texte jaune pour les réponses */
+    padding-left: 20px;
+    list-style-type: none; /* Supprime les puces */
+    margin: 5px 0;
+}
+
+button {
+    background-color: #f7e307e0; /* Bleu foncé pour les boutons */
+    color: #060163; /* Texte jaune */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: fadeInButton 1s ease-in-out; /* Animation du bouton */
+}
+
+button:hover {
+    background-color: #7b88a9; /* Bleu encore plus foncé au survol */
+    transition: background-color 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet à la vidéo de couvrir toute la fenêtre sans déformation */
+    z-index: -1; /* La vidéo est derrière le contenu principal */
+}
+
+/* Animation pour le fadeIn du titre */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour faire glisser la liste des réponses depuis la droite */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation du bouton (fadeIn et légère translation) */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

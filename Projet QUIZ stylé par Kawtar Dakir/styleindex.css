@@ -1,0 +1,90 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('IMG/index.png'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff; /* Texte blanc pour contraster avec l'arrière-plan */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour la boîte */
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Boîte sombre pour la lisibilité */
+    border-radius: 15px;
+    border: 5px solid #09326c; /* Bordure bleue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #FFD700; /* Jaune pour le titre */
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #FFD700; /* Ligne jaune sous le titre */
+    margin: 10px auto 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: #FFD700; /* Jaune pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #09326c; /* Bleu foncé au survol */
+    transform: scale(1.05);
+}
+
+/* Responsive: ajustement des tailles sur mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

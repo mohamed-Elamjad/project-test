@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="Stylehome.css"> <!-- Assurez-vous que votre CSS est bien lié -->
+</head>
+<style>
+    body {
+        background-image: url('IMG/background2.jpg'); /* Remplacez par le chemin de votre image */
+        background-size: cover; /* L'image couvrira toute la surface de la page */
+        background-position: center; /* Centrer l'image */
+        background-attachment: fixed; /* Garder l'image fixe lors du défilement */
+    }
+</style>
+<body>
+    <header>
+        <center><h1>FORMULAIRE D'INSCRIPTION</h1></center>
+    </header>
+
+    <section>
+        <form id="formulaire" action="index.html" method="GET">
+            <center><h4>Veiller remlpir le formulaire avec votre formations avant de commencer le QUIZ </h4></center>
+            <br>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prénom" name="prénom" placeholder="Entrez votre pénom" required>
+
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" placeholder="Entrez votre email" required>
+
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre téléphone" required>
+
+            <label for="date">Date de naissance :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Écrivez votre message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <p>Copyright ©2023 Tous droits réservés | Créé par ESTC</p>
+    </footer>
+</body>
+</html>

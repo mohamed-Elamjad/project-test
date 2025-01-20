@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ Quiz</title>
+  <link rel="stylesheet" href="mcqstyle.css">
+</head>
+<body>
+ 
+  <h1></h1>
+  <br>
+  <h1></h1>
+  <br>
+
+  <div id="timer">Time Left: 20:00</div>
+  <div class="question-timer" id="questionTimer">02:00 </div>
+  
+  <div class="qa-body">
+    <!-- Question 1 -->
+    <div class="question active" id="question1">
+        <h4>1. Qu'est-ce qu'une adresse IP de classe A ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q1" value="1">
+          <span> Elle utilise un masque de sous-réseau de 255.255.255.0. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q1" value="2">
+          <span> Elle est utilisée pour les réseaux ayant un très petit nombre d'hôtes. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q1" value="3">
+          <span> Elle commence par un chiffre compris entre 128 et 191. </span>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question active" id="question2">
+        <h4>2.  Quel est le rôle d un VLAN dans un réseau ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q2" value="1">
+          <span> Permettre la transmission des données au niveau de la couche physique.</span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q2" value="2">
+          <span> Augmenter la vitesse de transmission des paquets. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q2" value="3">
+          <span> Éliminer l'utilisation de routeurs entre différents réseaux. </span>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question active" id="question3">
+        <h4>3. Qu'est-ce que le NAT (Network Address Translation) permet de faire ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q3" value="1">
+          <span> Convertir une adresse IP privée en une adresse IP publique. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q3" value="2">
+          <span> Assigner des adresses IP dynamiques aux hôtes d'un réseau. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q3" value="3">
+          <span> Diviser un réseau en plusieurs sous-réseaux. </span>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question active" id="question4">
+        <h4>4. Quelle est la différence principale entre le routage statique et le routage dynamique ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q4" value="1">
+          <span> Le routage statique nécessite une configuration manuelle des routes. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q4" value="2">
+          <span> Le routage statique s adapte automatiquement aux changements du réseau. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q4" value="3">
+          <span> Le routage dynamique met à jour les routes automatiquement. </span>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question active" id="question5">
+        <h4>5. Quelle est la principale différence entre un switch de niveau 2 (L2) et un switch de niveau 3 (L3) ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q5" value="1">
+          <span> Un switch L3 peut effectuer du routage entre VLANs. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q5" value="2">
+          <span> Un switch L2 fonctionne uniquement avec les adresses IP. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q5" value="3">
+          <span> Un switch L3 peut effectuer des tâches de routage, comme un routeur. </span>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question active" id="question6">
+        <h4>6. Quel est le rôle du protocole DHCP dans un réseau ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q6" value="1">
+          <span> Attribuer des adresses IP dynamiques aux périphériques du réseau. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q6" value="2">
+          <span> Mettre à jour dynamiquement les routes dans un réseau. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q6" value="3">
+          <span> Fournir des informations sur les serveurs DNS </span>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question active" id="question7">
+        <h4>7. Qu'est-ce qu'un réseau de type "classé" (subnetting) permet de faire ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q7" value="1">
+          <span> Créer plusieurs sous-réseaux dans un réseau existant. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q7" value="2">
+          <span> Réaliser un filtrage de paquets en fonction des adresses IP. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q7" value="3">
+          <span> Effectuer des routages basés sur les adresses MAC. </span>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question active" id="question8">
+        <h4>8. Quelle est la fonction principale du protocole RIP ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q8" value="1">
+          <span> Calculer la distance entre les routeurs pour déterminer le meilleur chemin. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q8" value="2">
+          <span> Utiliser l algorithme de l état de lien pour calculer les meilleures routes. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q8" value="3">
+          <span> Mettre à jour périodiquement les tables de routage dans un réseau. </span>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question active" id="question9">
+        <h4>9. Qu'est-ce que le BGP (Border Gateway Protocol) ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q9" value="1">
+          <span> Un protocole de routage entre différents systèmes autonomes (AS). </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q9" value="2">
+          <span> Un protocole de routage à vecteur de distance. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q9" value="3">
+          <span> Un protocole qui utilise l'algorithme de l'état de lien. </span>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question active" id="question10">
+        <h4>10. Dans un réseau, quel est l objectif de la fonction de « port forwarding » sur un routeur ?</h4>
+        <div class="answers-row">
+          <input type="checkbox" name="q10" value="1">
+          <span> Rediriger le trafic entrant vers un port spécifique vers un périphérique interne. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q10" value="2">
+          <span> Transférer les paquets entre différents VLANs. </span>
+        </div><br>
+        <div class="answers-row">
+          <input type="checkbox" name="q10" value="3">
+          <span> Appliquer des règles de filtrage de paquets sur un réseau local </span>
+        </div>
+    </div>
+  </div>
+
+  <div class="navigation-buttons">
+      <button type="button" id="prevButton" onclick="showPrev()">Reutour</button>
+      <button type="button" id="nextButton" onclick="showNext()">Suivant</button>
+      <button type="button" id="submitButton" style="display:none;" onclick="submitQuiz()">Soumettre</button>
+  </div>  
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
