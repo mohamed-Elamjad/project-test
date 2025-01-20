@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue au Questionnaire</title>
+  <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Bienvenue au questionnaire sur le routage et la commutation</h1>
+    <p>Ce test est conçu pour améliorer vos connaissances dans le domaine du routage et de la commutation,<br>
+    deux aspects essentiels de la gestion des réseaux informatiques. Le quiz contient 10 questions portant<br>
+    sur différents concepts, tels que les protocoles de routage, les VLAN, les switchs et les routeurs.<br>
+    Certaines questions ont plusieurs réponses correctes, tandis que d'autres contiennent des questions pièges<br>
+    pour tester votre compréhension.</p>
+
+    <p>Le score sera calculé de cette manière :<br>
+    Si vous répondez correctement, vous aurez +2 points<br>
+    Si vous répondez incorrectement, vous perdez -1 points<br>
+    Si vous ne répondez pas à une question, vous perdez 0 points</p>
+
+    <p>Vous avez un temps limité pour terminer le quiz, alors soyez rapide et précis.<br>
+    Le timer commence dès que vous cliquez sur "Démarrer" et vous devrez répondre à toutes les questions avant que l'heure ne soit écoulée.<br>
+    Prenez votre temps pour réfléchir à chaque réponse, mais n'oubliez pas de garder un œil sur le temps qui file !</p>
+
+    <p>Bonne chance, et que vos connaissances en routage et en commutation vous mènent à la réussite !</p>
+    
+    <button onclick="startMCQ()">Démarrer</button>
+  </div>
+
+  <script>
+    function startMCQ() {
+      window.location.href = "mcq.html";
+    }
+  </script>
+
+</body>
+</html>
